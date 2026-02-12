@@ -1,0 +1,74 @@
+{
+  "name": "react-lifecycle-z",
+  "version": "1.0.0",
+  "description": "Tiny declarative lifecycle hook utilities for React. Mount, update, unmount — expressed clearly.",
+  "author": "Delpi.Kye",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+
+  "main": "./build/index.cjs.js",
+  "module": "./build/index.esm.js",
+  "types": "./build/index.d.ts",
+
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "import": "./build/index.esm.js",
+      "require": "./build/index.cjs.js"
+    }
+  },
+
+  "files": ["build", "react-lifecycle-z.png"],
+
+  "scripts": {
+    "clean": "rimraf build",
+    "build": "rollup -c",
+    "cb": "npm run clean && npm run build",
+    "prepublishOnly": "npm run build"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/delpikye-v/react-lifecycle.git"
+  },
+
+  "homepage": "https://github.com/delpikye-v/react-lifecycle#readme",
+
+  "bugs": {
+    "url": "https://github.com/delpikye-v/react-lifecycle/issues"
+  },
+
+  "keywords": [
+    "react",
+    "react-hooks",
+    "lifecycle",
+    "useeffect",
+    "typescript",
+    "react-utils",
+    "strictmode",
+    "react-18",
+    "react-19"
+  ],
+
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@types/react": "^18.0.0",
+    "rimraf": "^5.0.0",
+    "rollup": "^4.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "tslib": "^2.6.0",
+    "typescript": "^5.3.0"
+  },
+
+  "engines": {
+    "node": ">=16"
+  }
+}
